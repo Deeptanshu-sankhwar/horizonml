@@ -2,7 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+data_parallel_logs/
+model_parallel_logs/
 # C extensions
 *.so
 

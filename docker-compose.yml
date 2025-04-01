@@ -1,0 +1,67 @@
+version: "3.8"
+
+services:
+  worker1:
+    build: .
+    container_name: worker1
+    volumes:
+      - ./data:/app/data  # Share dataset directory
+    environment:
+      - RANK=0
+      - WORLD_SIZE=5
+      - MASTER_ADDR=worker1
+      - MASTER_PORT=29500
+    cpus: "0.4"
+    mem_limit: "1g"
+
+  worker2:
+    build: .
+    container_name: worker2
+    volumes:
+      - ./data:/app/data  # Share dataset directory
+    environment:
+      - RANK=1
+      - WORLD_SIZE=5
+      - MASTER_ADDR=worker1
+      - MASTER_PORT=29500
+    cpus: "0.4"
+    mem_limit: "1g"
+
+  worker3:
+    build: .
+    container_name: worker3
+    volumes:
+      - ./data:/app/data  # Share dataset directory
+    environment:
+      - RANK=2
+      - WORLD_SIZE=5
+      - MASTER_ADDR=worker1
+      - MASTER_PORT=29500
+    cpus: "0.4"
+    mem_limit: "1g"
+
+  worker4:
+    build: .
+    container_name: worker4
+    volumes:
+      - ./data:/app/data  # Share dataset directory
+    environment:
+      - RANK=3
+      - WORLD_SIZE=5
+      - MASTER_ADDR=worker1
+      - MASTER_PORT=29500
+    cpus: "0.4"
+    mem_limit: "1g"
+
+  worker5:
+    build: .
+    container_name: worker5
+    volumes:
+      - ./data:/app/data  # Share dataset directory
+    environment:
+      - RANK=4
+      - WORLD_SIZE=5
+      - MASTER_ADDR=worker1
+      - MASTER_PORT=29500
+    cpus: "0.4"
+    mem_limit: "1g"
