@@ -18,7 +18,6 @@ Both implementations use PyTorch's distributed communication primitives and are 
 - `data_parallel_train.py`: Implementation of data parallel training
 - `layer_model_parallel_train.py`: Implementation of model parallel training (layer-wise)
 - `main.py`: Benchmarking script to compare both approaches
-- `analyze_results.py`: Additional analysis tools for the benchmark results
 
 ## Requirements
 
