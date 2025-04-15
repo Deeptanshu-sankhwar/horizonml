@@ -1,6 +1,6 @@
 # HorizonML
 
-<img src="./assets/horizonml.png" alt="HorizonML Logo" width="200"/>
+![image](./assets/horizonml.png)
 
 A Hybrid Model Parallelism Framework for Distributed Training on Edge Devices. HorizonML enables efficient training of machine learning models across heterogeneous edge devices using distributed model parallelism, optimizing computation, communication, and resource allocation.
 
@@ -18,6 +18,7 @@ Both implementations use PyTorch's distributed communication primitives and are 
 - `data_parallel_train.py`: Implementation of data parallel training
 - `layer_model_parallel_train.py`: Implementation of model parallel training (layer-wise)
 - `main.py`: Benchmarking script to compare both approaches
+- `analyze_results.py`: Additional analysis tools for the benchmark results
 
 ## Requirements
 
@@ -115,6 +116,12 @@ python data_parallel_train.py --world_size 5 --epochs 5 --sample_size 1000
 
 ```bash
 python layer_model_parallel_train.py --world_size 5 --epochs 5 --sample_size 1000
+```
+
+### Running Tensor Parallel Training
+
+```bash
+python tensor_parallel_train.py --world_size 5 --epochs 5 --sample_size 1000
 ```
 
 ### Running Benchmarks

@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 data_parallel_logs/
 model_parallel_logs/
+tensor_parallel_logs/
 # C extensions
 *.so
 
