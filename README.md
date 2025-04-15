@@ -118,6 +118,12 @@ python data_parallel_train.py --world_size 5 --epochs 5 --sample_size 1000
 python layer_model_parallel_train.py --world_size 5 --epochs 5 --sample_size 1000
 ```
 
+### Running Tensor Parallel Training
+
+```bash
+python tensor_parallel_train.py --world_size 5 --epochs 5 --sample_size 1000
+```
+
 ### Running Benchmarks
 
 ```bash
